@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+// Variables
+$body-color : #666;
+$bg-color: white;
+$bg-color2: #F0F0F0;
+$border-color: red;
+$border-color2: #FF033E;
+$text-color: black;
+$body-background : #fafafa;
+$heading_color : #212121;
+$bordertop-color : #eee;
+$desc-color : #717171;
+
+@import "./sass/firstcontainer.scss";
+@import "./sass/overviewcontainer.scss";
+@import "./sass/usescontainer.scss";
+@import "./sass/effectscontainer.scss";
+@import "./sass/tousecontainer.scss";
+@import "./sass/howcontainer.scss";
+@import "./sass/safetycontainer.scss";
+@import "./sass/substitutecontainer.scss";
+@import "./sass/tipscontainer.scss";
+@import "./sass/concerncontainer.scss";
+@import "./sass/safetycontainer.scss";
+@import "./sass/quickcontainer.scss";
+@import "./sass/animations.scss";
+@import "./sass/modals.scss";
+
+body {
+    background-color: $body-background;
+    font-family: 'Varela', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: $body-color;
+}
+
+.main__container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .swiper__left {
+        width: 20%;
+        position: absolute;
+        left: -35px;
+        @media (max-width: 968px) {
+            width: 20%;
+            position: absolute;
+            left: -35px;
+}
+        .swiper-pagination {
+            background-color: $bg-color;
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            @media (max-width: 968px){
+            background-color: $bg-color;
+            height: 100vh;
+            left: 38px;
+            width: 120%;
+            display: flex;
+            flex-direction: column;
+            @media (max-width : 599px) {
+                display: none;
+            }
+            }
+        }
+    }
+
+    .swiper__right {
+        width: 80%;
+        height: 100vh;
+        position: absolute;
+        right: 20px;
+        top: 0px;
+        @media (max-width: 968px) {
+            width: 70%;
+            height: 100vh;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+        @media (max-width : 599px) {
+            width: 100%;
+            left: 0;
+        }
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+
+    & .swiper-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.swiper-slide {
+    height: auto !important;
+    text-align: justify;
+    font-size: 18px;
+    background: $bg-color2;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 25px;
+    background-color: $bg-color;
+    &_blank{
+        padding-left: 50px;
+        width: 50%;
+        @media (max-width :599px) {
+            padding-left: 20px;
+            width: 84%;
+        }
+        }
+    }
+
+.swiper-pagination-bullet {
+    background-color: $body-background;
+    width: auto;
+    height: 42px;
+    text-align: justify;
+    position: relative;
+    top: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: $text-color;
+    opacity: 1;
+    background: none;
+    padding-left: 15px;
+
+    &:hover {
+        font-weight: 600;
+    }
+}
+
+.swiper-pagination-bullet-active {
+    font-weight: 600;
+
+    &:after {
+        content: "\f054";
+        position: absolute;
+        font-family: FontAwesome;
+        right: 10px;
+    }
+}
+
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+.play{
+    display: flex;
+}
+.active{
+    background-color: $desc-color !important;
+}
+.active, .dot:hover {
+    background-color: $desc-color !important;
+  }
+.fade {
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+.border{
+    border : 2px solid $bordertop-color;
+}
+
+@keyframes fade {
+  from {transform: translateX(200px);} 
+  to {transform: translateX(0px);}
+}
+

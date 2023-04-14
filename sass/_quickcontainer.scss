@@ -1,0 +1,51 @@
+.quick__container{
+    margin-top: 10px;
+    width: 65%;
+    padding-left: 50px;
+    border-top: 1px solid #eee;
+    @media (max-width : 968px) {
+        width: 50%;
+    }
+    @media (max-width : 599px) {
+        width: 80%;
+        padding-left: 20px;
+    }
+    &__title{
+        font-size: 20px;
+        color: #616161;
+        font-weight: 700;
+    }
+}
+.quicklist{
+    font-size: 14px;
+    line-height: 1.36;
+    text-align: left;
+    color: #616161;
+    padding: 0 50px 0 0;
+    display: flex;
+    @media (max-width : 968px) {
+        flex-direction: column;
+    }
+    @media (max-width : 599px) {
+        padding-left: 20px;
+    }
+    &__container{
+        padding: 0;
+        margin: 20px;
+        &--list{
+            padding-bottom: 15px;
+        }
+    }
+    .quickvideo{
+        cursor: pointer;
+        &__thumb{
+            width: 340px;
+            height: 210px;
+        }
+        &__play{
+            position: relative;
+            left: 135px;
+            bottom: 150px;
+        }
+    }
+}

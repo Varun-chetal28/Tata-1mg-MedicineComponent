@@ -1,0 +1,177 @@
+.first__container {
+    width: 55%;
+    display: flex;
+    @media (max-width : 599px) {
+        flex-direction: column;
+    }
+    & .first__leftheader {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
+        flex-shrink: 0;
+        padding-left: 50px;
+        @media (max-width : 599px) {
+            padding-left: 20px;
+        }
+
+        & .first__prescription {
+            display: flex;
+            align-items: center;
+
+            &__heading {
+                background: url(//onemg.gumlet.io/RX_qgrguz.svg) no-repeat;
+                width: 14px;
+                height: 15px;
+            }
+
+            span {
+                font-size: 12px;
+                padding: 0 5px;
+                color: $text-color;
+            }
+
+            &__first {
+                padding-top: 25px;
+                text-transform: uppercase;
+                font-size: 14px;
+                color: #616161;
+                font-weight: 700;
+            }
+
+            &__second {
+                a {
+                    text-decoration: underline;
+                    font-size: 14px;
+                    color: #616161;
+                }
+            }
+
+            &__third {
+                padding-top: 20px;
+                text-transform: uppercase;
+                font-size: 14px;
+                color: #616161;
+                font-weight: 700;
+            }
+
+            &__fourth {
+                a {
+                    text-decoration: underline;
+                    font-size: 14px;
+                    color: #616161;
+                }
+            }
+
+            &__fifth {
+                padding-top: 20px;
+                text-transform: uppercase;
+                font-size: 14px;
+                color: #616161;
+                font-weight: 700;
+            }
+
+            &__sixth {
+                font-size: 14px;
+                color: #616161;
+            }
+        }
+    }
+
+    & .first__rightheader {
+        padding-top: 30px;
+        width: 100%;
+        height: 200px;
+        @media (max-width : 599px) {
+            width: 150%;
+        }
+        & .drugs__slideshow{
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+            margin-bottom: -20px;
+            &__images{
+                width: 300px;
+                height: 200px;
+                padding-left: 20px;
+                @media (max-width: 968px) {
+                width: 200px;
+                height: 200px;
+                padding-left: 60px;
+                }
+                @media (max-width: 599px) {
+                    width: 250px;
+                    height: 200px;
+                    padding-left: 80px;
+                    }
+            }
+            &__prev , &__next{
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color: $text-color;
+                font-weight: bold;
+                font-size: 18px;
+            }
+            &__prev{
+                display: flex;
+                z-index: 2;
+                justify-content: center;
+                align-items: center;
+                left: 28px;
+                width: 0px;
+                height: 0px;
+                border-radius: 3px;
+                box-shadow: 0 1px 5px 0 hsla(0,0%,84%,.3);
+                background-color: #fdfdfd;
+                @media (max-width: 968px){
+                    left: 65px;
+                }
+                @media (max-width: 599px){
+                left: 90px;
+                }
+            }
+            &__next{
+                display: flex;
+                z-index: 2;
+                justify-content: center;
+                align-items: center;
+                right: 5px;
+                width: 0px;
+                height: 0px;
+                border-radius: 3px;
+                box-shadow: 0 1px 5px 0 hsla(0,0%,84%,.3);
+                background-color: #fdfdfd;
+                @media (max-width: 968px){
+                    right: 0px;
+                }
+                @media (max-width: 599px){
+                    right: 0px;
+                    }
+            }
+            &__pagination{
+                text-align: center;
+                @media (max-width: 968px) {
+                    position: relative;
+                    text-align: center;
+                    left: 70px;
+                }
+                @media (max-width: 968px){
+                width: 250px;
+                }
+                &--dot{
+                    background-color: black;
+                    height: 6px;
+                    width: 6px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    display: inline-block;
+                    margin: 0 10px;
+                    transition: background-color 0.5s ease;
+                }
+            }
+        }
+    }
+}

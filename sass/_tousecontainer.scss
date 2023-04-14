@@ -1,0 +1,21 @@
+.touse__container{
+    width: 55%;
+    padding: 0 50px 24px;
+    border-top: 1px solid #eee;
+    @media (max-width : 599px) {
+        width: 80%;
+        padding-left: 20px;
+    }
+    &__heading{
+        text-transform: uppercase;
+        color: $heading_color;
+        font-weight: 700;
+        padding-top: 16px;
+        margin: 0;
+        font-size: 14px;
+    }
+    &__para{
+        padding: 8px 0 16px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,15 @@
+
+.concern__container{
+    margin-top: 20px;
+    width: 55%;
+    padding-left: 50px;
+    border-top: 1px solid $bordertop-color;
+    &--title{
+        font-weight: 700;
+        padding-top: 16px;
+        margin: 0;
+        font-size: 14px;
+        font-size: 20px;
+        color: #616161;
+    }
+}
